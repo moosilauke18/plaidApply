@@ -42,7 +42,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Please Try again")
 	}
-	req.Header.Set("User-Agent", "github.com:moosilauke18/plaidApply")
+	req.Header.Set("User-Agent", "https://github.com/moosilauke18/plaidApply")
 	client := http.Client{}
 	resp, err := client.Do(req)
 	if err != nil {
@@ -54,7 +54,6 @@ func main() {
 		log.Fatal(err)
 	}
 	log.Println(string(body))
-
 	sendEmail()
 
 }
